@@ -13,16 +13,16 @@ body {
 }
 
 #welcome-section {
+  padding-top: 0px;
+  margin-top: 0px;
   height: 100vh;
   background-color: gray;
-  padding: 2%;
 }
 
 #navbar {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
-  padding: 2%;
 }
 
 ul {
@@ -34,9 +34,13 @@ ul a {
 }
 
 @media (max-width: 799px ) {
-
+  #welcome-section {
+    background-color: gray;
+  }
 }
 
 @media (min-width: 800px) {
-
+  #welcome-section {
+    background-color: gray;
+  }
 }
