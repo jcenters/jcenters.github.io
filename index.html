@@ -242,8 +242,8 @@
 
         .hit-item {
             display: grid;
-            grid-template-columns: 160px 1fr auto;
-            align-items: baseline;
+            grid-template-columns: 140px 1fr 200px;
+            align-items: first baseline;
             padding: 0.6rem 0;
             border-bottom: 1px solid var(--rule);
             gap: 1rem;
@@ -258,6 +258,13 @@
             letter-spacing: 0.06em;
             color: var(--warm);
             font-weight: 600;
+            line-height: 1.6;
+        }
+
+        .hit-stats {
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: right;
         }
 
         .hit-title {
@@ -288,12 +295,6 @@
             border-radius: 2px;
             vertical-align: middle;
             margin-left: 0.3em;
-        }
-
-        .hit-stats {
-            font-size: 0.8rem;
-            color: var(--muted);
-            white-space: nowrap;
         }
 
         @media (max-width: 600px) {
