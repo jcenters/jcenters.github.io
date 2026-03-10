@@ -421,6 +421,25 @@
             letter-spacing: 0.02em;
         }
 
+        /* ---- CTA BUTTON ---- */
+        .cta-button {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--paper);
+            background: var(--accent);
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #6d3610;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
         /* ---- RESPONSIVE ---- */
         @media (max-width: 600px) {
             html { font-size: 16px; }
@@ -451,7 +470,8 @@
 
 <header>
     <h1>Josh Centers</h1>
-    <p class="tagline">Content Strategist · SEO · Editorial Leadership</p>
+    <p class="tagline">Content Strategist · SEO · Editorial Leadership · AI Workflows</p>
+    <div class="open-to">Open to: Full-time  |  Consulting  |  Fractional</div>
     <div class="contact-row">
         <span>Nashville, TN area</span>
         <a href="mailto:jobs@joshcenters.com">jobs@joshcenters.com</a>
@@ -756,14 +776,14 @@
 <section id="contact">
     <div class="section-label">Get in Touch</div>
     <h2>Let's Talk</h2>
-    <div class="open-to">Open to: Full-time  |  Consulting  |  Fractional</div>
     <p>
         If you need someone who can own a content program end-to-end, from strategy and keyword research through production and performance reporting, I'd like to hear from you.
     </p>
     <p>
-        <a href="mailto:jobs@joshcenters.com" style="color: var(--accent); font-weight: 600;">jobs@joshcenters.com</a><br>
-        <a href="https://www.linkedin.com/in/joshcenters/" style="color: var(--accent);" target="_blank">LinkedIn</a><br>
-        <a href="https://joshcenters.com/josh-centers-resume.pdf" style="color: var(--accent);" target="_blank">Download Resume (PDF)</a>
+        <a href="mailto:jobs@joshcenters.com" class="cta-button">jobs@joshcenters.com</a>
+    </p>
+    <p>
+        <a href="https://www.linkedin.com/in/joshcenters/" style="color: var(--accent);" target="_blank">LinkedIn</a>&ensp;·&ensp;<a href="https://joshcenters.com/josh-centers-resume.pdf" style="color: var(--accent);" target="_blank">Resume (PDF)</a>
     </p>
 </section>
 
