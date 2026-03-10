@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Centers | Content Strategist & SEO</title>
+    <meta name="description" content="13+ years driving organic growth for SaaS, media, and publishing brands. Content strategy, SEO, and editorial leadership.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --paper: #f8f6f1;
+            --warm: #c4a882;
+            --accent: #8b4513;
+            --muted: #6b6560;
+            --rule: #d4cfc7;
+            --highlight: #f0ead6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- HEADER ---- */
+        header {
+            padding: 4rem 2rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            border-bottom: 3px double var(--rule);
+        }
+
+        header h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+
+        header .tagline {
+            font-size: 1.1rem;
+            color: var(--muted);
+            font-style: italic;
+            font-family: 'Libre Baskerville', serif;
+            margin-bottom: 1.5rem;
+        }
+
+        header .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        header .contact-row a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        header .contact-row a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            gap: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            border-bottom: 1px solid var(--rule);
+            position: sticky;
+            top: 0;
+            background: var(--paper);
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* ---- SECTIONS ---- */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section + section {
+            border-top: 1px solid var(--rule);
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            color: var(--warm);
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+        }
+
+        h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            max-width: 65ch;
+        }
+
+        /* ---- INTRO ---- */
+        .intro-text {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--ink);
+        }
+
+        /* ---- STATS ROW ---- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .stat {
+            padding: 1.5rem;
+            background: var(--highlight);
+            border-left: 3px solid var(--warm);
+        }
+
+        .stat-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        /* ---- CASE STUDIES ---- */
+        .case-study {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .case-study:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .case-meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--warm);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+
+        .result-item {
+            padding: 1rem 1.25rem;
+            background: white;
+            border: 1px solid var(--rule);
+        }
+
+        .result-item strong {
+            display: block;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 0.2rem;
+        }
+
+        .result-item span {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        /* ---- CONTENT HITS ---- */
+        .content-hits {
+            margin: 1.5rem 0;
+        }
+
+        .hit-item {
+            display: grid;
+            grid-template-columns: 160px 1fr auto;
+            align-items: baseline;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--rule);
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hit-item:last-child { border-bottom: none; }
+
+        .hit-role {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--warm);
+            font-weight: 600;
+        }
+
+        .hit-title {
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .hit-pub-tag {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            background: var(--highlight);
+            padding: 0.1em 0.4em;
+            border-radius: 2px;
+            vertical-align: middle;
+            margin-left: 0.3em;
+        }
+
+        .hit-stats {
+            font-size: 0.8rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 600px) {
+            .hit-item {
+                grid-template-columns: 1fr;
+                gap: 0.15rem;
+                padding: 0.75rem 0;
+            }
+        }
+
+        /* ---- SKILLS ---- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-group h3 {
+            font-size: 0.95rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .skill-group p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ---- WRITING SAMPLES ---- */
+        .sample {
+            display: block;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            background: white;
+            border: 1px solid var(--rule);
+            text-decoration: none;
+            color: var(--ink);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .sample:hover {
+            border-color: var(--warm);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .sample-pub {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--warm);
+            font-weight: 600;
+        }
+
+        .sample-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 0.25rem 0;
+        }
+
+        .sample-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            border-top: 3px double var(--rule);
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            header { padding: 2.5rem 1.25rem 2rem; }
+            header h1 { font-size: 2rem; }
+            section { padding: 2rem 1.25rem; }
+            nav { padding: 1rem 1.25rem; gap: 1.25rem; flex-wrap: wrap; }
+            .stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ---- ANIMATIONS ---- */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header, section {
+            animation: fadeUp 0.5s ease-out both;
+        }
+
+        section:nth-of-type(2) { animation-delay: 0.05s; }
+        section:nth-of-type(3) { animation-delay: 0.1s; }
+        section:nth-of-type(4) { animation-delay: 0.15s; }
+        section:nth-of-type(5) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Josh Centers</h1>
+    <p class="tagline">Content Strategist · SEO · Editorial Leadership</p>
+    <div class="contact-row">
+        <span>Nashville, TN area</span>
+        <a href="mailto:jobs@joshcenters.com">jobs@joshcenters.com</a>
+        <a href="https://www.linkedin.com/in/joshcenters/" target="_blank">LinkedIn</a>
+    </div>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#work">Case Studies</a>
+    <a href="#skills">Expertise</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about">
+    <div class="section-label">About</div>
+    <p class="intro-text">
+        I've spent 13 years building editorial operations and organic growth engines across SaaS, enthusiast media, and publishing, including contributing to 10,000+ book sales as an author at Take Control Publishing. I know how to take a content program from strategy through execution: keyword research, editorial calendars, on-page SEO, content production at scale, and performance reporting. I've managed multi-site portfolios, led distributed editorial teams, and built workflows that turn subject-matter expertise into measurable traffic and revenue.
+    </p>
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-number">220%</div>
+            <div class="stat-label">Organic traffic growth for a B2B SaaS product</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">21K → 40K+</div>
+            <div class="stat-label">Top-10 keyword positions grown across a media portfolio</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">4,289</div>
+            <div class="stat-label">X followers gained in under 30 days for a new brand account</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">259</div>
+            <div class="stat-label">Newsletter subscribers in 14 days from a cold start</div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CASE STUDIES ==================== -->
+<section id="work">
+    <div class="section-label">Case Studies</div>
+    <h2>Selected Work</h2>
+
+    <!-- Case Study 1: TextExpander -->
+    <div class="case-study">
+        <div class="case-meta">B2B SaaS · Content Marketing</div>
+        <h3>Scaling Organic Growth for a Productivity SaaS Platform</h3>
+        <p>
+            As Content Marketing Manager for TextExpander, I inherited a blog that was publishing consistently but not strategically. I rebuilt the content program around keyword research, search intent mapping, and a topical authority model focused on productivity, automation, and workplace efficiency, managing execution across a distributed team.
+        </p>
+        <p>
+            I developed an editorial calendar driven by Ahrefs keyword data, rewrote and consolidated underperforming legacy content, and established an internal linking architecture that reinforced our core topic clusters. I also identified medical conferences as an untapped content vertical, then planned and wrote articles targeting specialty-specific search terms across cardiology, pediatrics, psychology, and nephrology. In 2025 alone, top-performing articles I wrote, revised, or restructured pulled over 54,000 organic views.
+        </p>
+
+        <div class="content-hits">
+            <div class="hit-item">
+                <div class="hit-role">Wrote</div>
+                <div class="hit-title">Best AI Humanizer Tools</div>
+                <div class="hit-stats">16,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned &amp; wrote</div>
+                <div class="hit-title">Cardiology Conferences</div>
+                <div class="hit-stats">13,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned &amp; wrote</div>
+                <div class="hit-title">Pediatric Conferences</div>
+                <div class="hit-stats">11,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned &amp; wrote</div>
+                <div class="hit-title">Psychology Conferences</div>
+                <div class="hit-stats">8,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned &amp; wrote</div>
+                <div class="hit-title">Nephrology Conferences</div>
+                <div class="hit-stats">5,800+ views in 2025</div>
+            </div>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-item">
+                <strong>+220%</strong>
+                <span>Organic traffic growth</span>
+            </div>
+            <div class="result-item">
+                <strong>54,000+</strong>
+                <span>Organic views in 2025 from top articles</span>
+            </div>
+            <div class="result-item">
+                <strong>4 specialties</strong>
+                <span>Medical conference vertical built from scratch</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study 2: VerticalScope Portfolio -->
+    <div class="case-study">
+        <div class="case-meta">Enthusiast Media · Multi-Site SEO · Editorial Strategy</div>
+        <h3>SEO &amp; Editorial Strategy Across a Three-Site Media Portfolio</h3>
+        <p>
+            As Editor-in-Chief overseeing three high-traffic enthusiast publications under VerticalScope, I managed both editorial direction and SEO strategy for sites collectively drawing millions of monthly visitors. The challenge: three separate editorial teams, overlapping keyword targets, and years of accumulated content debt.
+        </p>
+        <p>
+            I conducted a comprehensive audit using Ahrefs to identify keyword cannibalization across the portfolio, then implemented a domain-level content strategy that gave each site clear topical lanes. I built standardized SEO workflows for non-technical editors (title tag formulas, heading structure templates, internal linking checklists) and established weekly reporting to track ranking movement and content performance.
+        </p>
+        <p>
+            Beyond process, I drove results at the individual content level: researching keywords, planning content briefs, sourcing specialist writers, and writing high-impact pieces myself. Select results across the portfolio over the past 12 months:
+        </p>
+
+        <div class="content-hits">
+            <div class="hit-item">
+                <div class="hit-role">Sourced writer &amp; planned</div>
+                <div class="hit-title">Best Small Handgun for Women <span class="hit-pub-tag">TFB</span></div>
+                <div class="hit-stats">55,000+ views · Multiple #1 rankings</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote</div>
+                <div class="hit-title">Glock Announces Generation 6 <span class="hit-pub-tag">TFB</span></div>
+                <div class="hit-stats">52,000+ views</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote</div>
+                <div class="hit-title">Say Goodbye to Glock, Say Hello to Glock <span class="hit-pub-tag">TFB</span></div>
+                <div class="hit-stats">26,000+ views</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned</div>
+                <div class="hit-title">The Top 5 Coolest Looking Pistols <span class="hit-pub-tag">TFB</span></div>
+                <div class="hit-stats">25,000+ views</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned</div>
+                <div class="hit-title">10 Best Home Defense Rifles <span class="hit-pub-tag">TFB</span></div>
+                <div class="hit-stats">24,000+ views</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Assigned</div>
+                <div class="hit-title">Tennessee Legalizes Deer Baiting <span class="hit-pub-tag">OHUB</span></div>
+                <div class="hit-stats">15,000+ views</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Planned content &amp; updates</div>
+                <div class="hit-title">Best Turkey Shotguns 2025 <span class="hit-pub-tag">AOD</span></div>
+                <div class="hit-stats">12,700+ views · #1 ranking</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote</div>
+                <div class="hit-title">5 Things to Know Before You Buy Starlink Mini <span class="hit-pub-tag">OHUB</span></div>
+                <div class="hit-stats">10,000+ views</div>
+            </div>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-item">
+                <strong>21K → 40K+</strong>
+                <span>Top-10 keyword positions on the flagship property</span>
+            </div>
+            <div class="result-item">
+                <strong>120%+</strong>
+                <span>Views growth on AllOutdoor in 2025</span>
+            </div>
+            <div class="result-item">
+                <strong>Scalable workflows</strong>
+                <span>SEO processes adopted by non-technical editorial teams</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study 3: Chapter House -->
+    <div class="case-study">
+        <div class="case-meta">Publishing · Brand Launch · Social &amp; Newsletter</div>
+        <h3>Building a Publishing Imprint from Zero</h3>
+        <p>
+            Co-founding Chapter House, a classical education publishing imprint launching June 2026, has been an exercise in building every layer of a content brand from scratch: positioning, audience development, content strategy, and go-to-market planning.
+        </p>
+        <p>
+            I developed a two-channel audience strategy: a Substack newsletter (Virtue &amp; Wonder) for long-form thought leadership and an X account (@ChHouseBooks) for community engagement. The newsletter hit 259 subscribers in its first 14 days with 11.2K views. On X, a strategic engagement approach built around reply-threading and timely content drove 4,289 new followers in under a month, with a single peak day generating 132K impressions. Total reach exceeded 352K impressions in the first 28 days.
+        </p>
+        <div class="results-grid">
+            <div class="result-item">
+                <strong>4,289</strong>
+                <span>X followers in &lt;30 days</span>
+            </div>
+            <div class="result-item">
+                <strong>352K</strong>
+                <span>Impressions in first month on X</span>
+            </div>
+            <div class="result-item">
+                <strong>259</strong>
+                <span>Newsletter subscribers in 14 days</span>
+            </div>
+            <div class="result-item">
+                <strong>11.2K</strong>
+                <span>Newsletter views in first 2 weeks</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Study 4: TidBITS -->
+    <div class="case-study">
+        <div class="case-meta">Tech Media · Evergreen Content · Long-Tail SEO</div>
+        <h3>Evergreen Tech Content Still Performing Years Later</h3>
+        <p>
+            As Managing Editor and writer at TidBITS, a long-running Apple technology publication, I managed freelancers and content production while producing practical how-to and product content optimized for search. I departed in late 2022, but the content keeps working. In 2025 alone, articles I wrote between 2016 and 2022 pulled over 31,500 combined views.
+        </p>
+        <div class="content-hits">
+            <div class="hit-item">
+                <div class="hit-role">Wrote (2022)</div>
+                <div class="hit-title">Kindle Kids: The Best Way to Set Up a Kindle for a Young Reader</div>
+                <div class="hit-stats">17,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote (2022)</div>
+                <div class="hit-title">Here's Why Your AirTag Battery Replacement Is Not Working</div>
+                <div class="hit-stats">6,000+ views in 2025</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote (2016)</div>
+                <div class="hit-title">How to Fix Connection Problems with the AirPods</div>
+                <div class="hit-stats">4,900+ views in 2025 · Still ranking after 9 years</div>
+            </div>
+            <div class="hit-item">
+                <div class="hit-role">Wrote (2018)</div>
+                <div class="hit-title">What to Do If Your iPad Gets Disabled</div>
+                <div class="hit-stats">3,600+ views in 2025</div>
+            </div>
+        </div>
+        <div class="results-grid">
+            <div class="result-item">
+                <strong>31,500+</strong>
+                <span>Views in 2025 from content written 3 to 9 years ago</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SKILLS ==================== -->
+<section id="skills">
+    <div class="section-label">Expertise</div>
+    <h2>What I Do</h2>
+    <div class="skills-grid">
+        <div class="skill-group">
+            <h3>SEO &amp; Analytics</h3>
+            <p>On-page and technical SEO, keyword research and mapping, search intent analysis, topical authority development, SERP performance analysis, content gap analysis, SEO content auditing. Ahrefs (power user), Google Analytics 4, Google Search Console, Looker Studio, Screaming Frog, Google Tag Manager.</p>
+        </div>
+        <div class="skill-group">
+            <h3>Content Strategy &amp; Optimization</h3>
+            <p>Content marketing strategy, editorial calendar planning, content refresh strategy, internal linking strategy, funnel content strategy, conversion rate optimization, content governance. Experience across SaaS, media, e-commerce, and publishing verticals.</p>
+        </div>
+        <div class="skill-group">
+            <h3>Editorial &amp; Team Leadership</h3>
+            <p>13+ years managing writers, editors, and freelancers across distributed teams. Editorial operations, style guide development, editorial workflow design, stakeholder management, cross-functional collaboration. Comfortable running multiple properties simultaneously.</p>
+        </div>
+        <div class="skill-group">
+            <h3>Tools &amp; Platforms</h3>
+            <p>WordPress, HubSpot, Yoast SEO, Rank Math, Substack, YouTube Studio, Canva, Adobe Premiere Pro, CapCut. AI-assisted content operations using Claude and ChatGPT, prompt engineering for content workflows, process automation for content and SEO ops. Basic HTML/CSS, Git, multi-site CMS management.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== WRITING ==================== -->
+<section id="writing">
+    <div class="section-label">Writing Samples</div>
+    <h2>Selected Writing</h2>
+    <p style="color: var(--muted); margin-bottom: 1.5rem;">A few pieces that demonstrate range, from SaaS product content to long-form editorial and educational publishing.</p>
+
+    <a href="https://textexpander.com/blog/best-ai-humanizer-tools" target="_blank" class="sample">
+        <div class="sample-pub">TextExpander · SaaS Blog</div>
+        <div class="sample-title">Best AI Humanizer Tools</div>
+        <div class="sample-desc">Top-performing SaaS content piece. 16,000+ organic views in 2025. Search-optimized content marketing at the awareness stage.</div>
+    </a>
+
+    <a href="https://www.thefirearmblog.com/blog/glock-announces-generation-6-g17-g19-and-g45-get-ergonomic-overhaul-44824474" target="_blank" class="sample">
+        <div class="sample-pub">The Firearm Blog · News &amp; Analysis</div>
+        <div class="sample-title">Glock Announces Generation 6: G17, G19, and G45 Get Ergonomic Overhaul</div>
+        <div class="sample-desc">Breaking product launch coverage. 52,000+ views. Demonstrates fast-turnaround editorial writing on a high-interest news topic.</div>
+    </a>
+
+    <a href="https://virtueandwonder.com/p/if-you-can-read-this-youre-probably" target="_blank" class="sample">
+        <div class="sample-pub">Virtue &amp; Wonder · Newsletter</div>
+        <div class="sample-title">If You Can Read This, You're Probably Illiterate</div>
+        <div class="sample-desc">Viral newsletter essay. 9,600+ views, 193 likes, 43 shares. Brand storytelling that drives subscriber growth from a cold start.</div>
+    </a>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+    <div class="section-label">Get in Touch</div>
+    <h2>Let's Talk</h2>
+    <p>
+        I'm open to full-time content marketing and SEO roles, as well as consulting engagements. If you need someone who can own a content program end-to-end, from strategy and keyword research through production and performance reporting, I'd like to hear from you.
+    </p>
+    <p>
+        <a href="mailto:jobs@joshcenters.com" style="color: var(--accent); font-weight: 600;">jobs@joshcenters.com</a><br>
+        <a href="https://www.linkedin.com/in/joshcenters/" style="color: var(--accent);" target="_blank">LinkedIn</a>
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Josh Centers. Built with patience and too much coffee.</p>
+</footer>
+
+</body>
+</html>
